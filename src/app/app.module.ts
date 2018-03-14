@@ -4,15 +4,25 @@ import { AlertModule } from 'ngx-bootstrap';
 
 
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './layout/navbar/navbar.component';
+import { FooterComponent } from './layout/footer/footer.component';
+import { LeftsidebarComponent } from './layout/leftsidebar/leftsidebar.component';
+import { AppRouteModule } from './app-route.module';
+import { HomeModule } from './home/home.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    FooterComponent,
+    LeftsidebarComponent
   ],
   imports: [
     BrowserModule,
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    AppRouteModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
