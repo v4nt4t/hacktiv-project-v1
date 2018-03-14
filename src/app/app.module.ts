@@ -9,7 +9,8 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { LeftsidebarComponent } from './layout/leftsidebar/leftsidebar.component';
 import { AppRouteModule } from './app-route.module';
 import { HomeModule } from './home/home.module';
-
+import { EntityModule } from './entity/entity.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { HomeModule } from './home/home.module';
     BrowserModule,
     AlertModule.forRoot(),
     AppRouteModule,
-    HomeModule
+    HomeModule,
+    EntityModule,
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

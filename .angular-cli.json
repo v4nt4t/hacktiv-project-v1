@@ -22,7 +22,8 @@
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "styles.css",
         "assets/css/main.css",
-        "assets/vendor/linearicons/style.css"
+        "assets/vendor/linearicons/style.css",
+        "assets/vendor/font-awesome/css/font-awesome.min.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
