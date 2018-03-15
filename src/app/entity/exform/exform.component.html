@@ -1,0 +1,65 @@
+<p>
+  Silahkan Dicoba untuk Menambah dan Menghapus Data.
+</p>
+
+<div class="panel">
+    <div class="panel-heading">
+        <h3 class="panel-title">Inputs</h3>
+    </div>
+      <div class="panel-body">
+<form>
+    <div class="form-group row">
+      <label for="firstName" class="col-sm-2 col-form-label">First Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control"  id="firstName" name="firstName" [(ngModel)]="ex.firstName">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="lastName" class="col-sm-2 col-form-label">Last Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="lastName" name="lasttName" [(ngModel)]="ex.lastName">
+      </div>
+    </div>
+    <div class="form-group row">
+        <label for="userName" class="col-sm-2 col-form-label">User Name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="userName" name="userName" [(ngModel)]="ex.userName">
+        </div>
+      </div>
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <button (click) = "add(ex)" class="btn btn-primary">Add</button>
+      </div>
+    </div>
+  </form>
+  </div>
+  </div>
+
+<!-- TABLE STRIPED -->
+<div class="panel">
+  <div class="panel-heading">
+    <h3 class="panel-title">List Data</h3>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Username</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor= "let exform of exforms; let i=index" >
+          <td>{{i+1}}</td>
+          <td>{{exform.firstName}}</td>
+          <td>{{exform.lastName}}</td>
+          <td>{{exform.userName}}</td>
+          <td><button (click) = "delete(i)" class="btn btn-danger btn-sm"><span class="fa fa-remove"></span>Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- END TABLE STRIPED -->
